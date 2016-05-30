@@ -1,40 +1,29 @@
 import React from 'react';
-import Selector from './components/Selector'
-import Button from './components/Button'
-import LikeButton from './components/LikeButton'
-import FileUploader from './components/FileUploader'
+import * as nostra from 'nostra';
+import Nostra from './components/Nostra'
 import styles from './App.css';
 
 export default class App extends React.Component {
   constructor(props) {
     super(props);
-    this.selectChange = this.selectChange.bind(this);
+    this.state = {fortune: "Lucky."};
     this.buttonClick = this.buttonClick.bind(this);
   }
 
-  selectChange(value) {
-    // this.props.dispatch(selectReddit(nextReddit));
-    console.log("Selected " + value);
+  componentDidMount() {
+    this.setState({fortune: nostra.generate()})
   }
 
   buttonClick(value) {
-    // this.props.dispatch(selectReddit(nextReddit));
     console.log("Clicked " + value);
+    this.setState({fortune: nostra.generate()})
   }
 
-
   render() {
-
+    const { fortune } = this.state;
     return (
         <div className={styles.app}>
-          <Selector value={'frontend'}
-                    onChange={this.selectChange}
-                    options={['reactjs', 'frontend']} />
-          <Button value={'Click me.'}
-                    onClick={this.buttonClick}/>
-          <LikeButton />
-          <FileUploader />
-
+          <Nostra fortune={fortune} onClick={this.buttonClick} />
         </div>
     );
   }
