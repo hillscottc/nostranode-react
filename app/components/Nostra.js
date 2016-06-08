@@ -4,11 +4,13 @@ import styles from './Nostra.css';
 
 const Nostra = ({ fortune, onClick }) => (
     <div className={styles.normal}>
-      <div>{fortune}</div>
+      <article>{fortune}</article>
       <br/>
-      <button type="button" onClick={onClick} >
-        Get Fortune
-      </button>
+      <div>
+        <button type="button" onClick={onClick} >
+          Get Fortune
+        </button>
+      </div>
     </div>
 );
 
