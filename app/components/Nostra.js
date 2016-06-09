@@ -3,10 +3,12 @@ import styles from './Nostra.css';
 
 
 const Nostra = ({ fortune, onClick }) => (
-    <div className={styles.normal}>
-      <article>{fortune}</article>
+    <div>
+      <div className={styles.fortune}>
+        {fortune}
+      </div>
       <br/>
-      <div>
+      <div className={styles.btnDiv}>
         <button type="button" onClick={onClick} >
           Get Fortune
         </button>

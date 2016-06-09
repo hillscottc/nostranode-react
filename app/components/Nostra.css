@@ -1,16 +1,35 @@
 
 
-.normal {
+.fortune {
     border-radius: 20px 20px 20px 20px;
     -moz-border-radius: 20px 20px 20px 20px;
     -webkit-border-radius: 20px 20px 20px 20px;
     border: 0px solid #000000;
     background-color: goldenrod;
     padding: 15px;
-    margin: 10px;
-    font-size: larger;
+    margin: 30px auto 10px auto;
+    font-size: x-large;
+    line-height: 200%;
+    width: 75%;
 }
 
-.normal div {
+.btnDiv {
     text-align: center;
+}
+
+button {
+    background: #428BCA;
+    color: #fff;
+    font-size: 20px;
+    height: 60px;
+    width: 150px;
+    line-height: 60px;
+    margin: 25px 25px;
+    text-align: center;
+    border: 0;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover {
+    background: #3071A9
 }
